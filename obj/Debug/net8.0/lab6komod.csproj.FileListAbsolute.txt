@@ -1,0 +1,14 @@
+D:\учеба\komodlabs\6\lab6komod\bin\Debug\net8.0\lab6komod.exe
+D:\учеба\komodlabs\6\lab6komod\bin\Debug\net8.0\lab6komod.deps.json
+D:\учеба\komodlabs\6\lab6komod\bin\Debug\net8.0\lab6komod.runtimeconfig.json
+D:\учеба\komodlabs\6\lab6komod\bin\Debug\net8.0\lab6komod.dll
+D:\учеба\komodlabs\6\lab6komod\bin\Debug\net8.0\lab6komod.pdb
+D:\учеба\komodlabs\6\lab6komod\obj\Debug\net8.0\lab6komod.GeneratedMSBuildEditorConfig.editorconfig
+D:\учеба\komodlabs\6\lab6komod\obj\Debug\net8.0\lab6komod.AssemblyInfoInputs.cache
+D:\учеба\komodlabs\6\lab6komod\obj\Debug\net8.0\lab6komod.AssemblyInfo.cs
+D:\учеба\komodlabs\6\lab6komod\obj\Debug\net8.0\lab6komod.csproj.CoreCompileInputs.cache
+D:\учеба\komodlabs\6\lab6komod\obj\Debug\net8.0\lab6komod.dll
+D:\учеба\komodlabs\6\lab6komod\obj\Debug\net8.0\refint\lab6komod.dll
+D:\учеба\komodlabs\6\lab6komod\obj\Debug\net8.0\lab6komod.pdb
+D:\учеба\komodlabs\6\lab6komod\obj\Debug\net8.0\lab6komod.genruntimeconfig.cache
+D:\учеба\komodlabs\6\lab6komod\obj\Debug\net8.0\ref\lab6komod.dll

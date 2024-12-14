@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("lab6komod")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd9503f5cdf2f024b0bb561e236f1004a03dc231")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2097560125b3a4dd5720a4c814f2f8299a516d07")]
 [assembly: System.Reflection.AssemblyProductAttribute("lab6komod")]
 [assembly: System.Reflection.AssemblyTitleAttribute("lab6komod")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

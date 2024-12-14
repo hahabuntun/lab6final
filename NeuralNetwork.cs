@@ -3,7 +3,7 @@ using System.Text.Json;
 
 class NeuralNetwork{
 
-    private double _learningRate = 0.01;
+    private double _learningRate = 0.1;
     private int _numNeuronsInput = 5;
     private int _numNeuronsHidden = 11;
     private double[,] _hiddenWeights;
@@ -22,6 +22,23 @@ class NeuralNetwork{
         _outputWeights = new double[_numNeuronsHidden];
         _maxValues = new double[6] { -9999999, -9999999, -9999999, -9999999, -9999999, -9999999 };
         _minValues = new double[6] { 99999999999999, 99999999999999, 99999999999999, 99999999999999, 99999999999999, 99999999999999 };
+    
+        Random rand = new Random();
+
+        // Для скрытых весов
+        for (int i = 0; i < _numNeuronsInput; i++)
+        {
+            for (int j = 0; j < _numNeuronsHidden; j++)
+            {
+                _hiddenWeights[i, j] = rand.NextDouble() * 0.2 - 0.1; // Значения в диапазоне [-0.1, 0.1]
+            }
+        }
+
+        // Для выходных весов
+        for (int i = 0; i < _numNeuronsHidden; i++)
+        {
+            _outputWeights[i] = rand.NextDouble() * 0.2 - 0.1; // Значения в диапазоне [-0.1, 0.1]
+        }
     }
 
 
@@ -179,15 +196,16 @@ public (double[], double)[] LoadDataFromFile(string filePath){
     /// </summary>
     /// <param name="data"></param>
     public void TrainModel((double [], double)[] data){
-        double minError = 1;
         for (int epoch = 1; epoch <= 10000000; epoch++){
             //data = ShuffleData(data);
+            double minError = 1000000;
+
             for (int i = 0; i < data.Length; i++){
                 var features = data[i].Item1;
 
                 var actualValue = data[i].Item2;
                 var predictedValue = ForwardPass(features);
-                if(Math.Abs(DenormalizeElement(actualValue, 5) - DenormalizeElement(predictedValue, 5)) < minError){
+                if(Math.Abs(DenormalizeElement(actualValue, 5) - DenormalizeElement(predictedValue, 5)) <= minError){
                     minError = Math.Abs(DenormalizeElement(actualValue, 5) - DenormalizeElement(predictedValue, 5));
                 }
 
@@ -199,10 +217,10 @@ public (double[], double)[] LoadDataFromFile(string filePath){
                 Console.WriteLine("Нейронная сеть обучена по достижению средней ошибки 0.0018");
                 return;
             }
-            if (minError < 0.0018){
-                Console.WriteLine("Нейронная сеть обучена по достижению минимальной ошибки на примере = 0.0018");
-                return;
-            }
+            // if (minError < 0.0018){
+            //     Console.WriteLine("Нейронная сеть обучена по достижению минимальной ошибки на примере = 0.0018");
+            //     return;
+            // }
         }
         Console.WriteLine("Нейронная сеть обучена.");
     }
